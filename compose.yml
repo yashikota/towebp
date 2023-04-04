@@ -1,0 +1,7 @@
+services:
+  towebp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: towebp:latest
+    container_name: towebp
