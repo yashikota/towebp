@@ -1,4 +1,4 @@
-module github.com/yashikota/towebp
+module github.com/eko-app/towebp
 
 go 1.18
 
