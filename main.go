@@ -7,6 +7,8 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/GoWebProd/uuid7"
+
 	"github.com/adrium/goheif"
 	"github.com/disintegration/imaging"
 	"github.com/gabriel-vasile/mimetype"
@@ -24,8 +26,10 @@ func main() {
 		log.Fatal("Usage: towebp <input image>")
 	}
 
+	u := uuid7.New()
+
 	input := os.Args[1]
-	output := input[:len(input)-len(filepath.Ext(input))] + ".webp"
+	output := u.Next().String() + ".webp"
 
 	var img image.Image
 	var err error
